@@ -9,9 +9,9 @@ public class Moving : MonoBehaviour
     [SerializeField] private float speed = 10f;
     private bool _move;
     private Vector3 _dirSpeed;
-
-    private Coroutine _handler;
-
+    
+    [HideInInspector]
+    public UnityEvent gamePassed;
 
     void Start()
     {
@@ -21,13 +21,9 @@ public class Moving : MonoBehaviour
     public void StopMoving()
     {
         _move = false;
+        gamePassed.Invoke();
     }
-
-    public void Finish()
-    {
-        StopMoving();
-    }
-
+ 
     public void Explosion()
     {
         StopMoving();

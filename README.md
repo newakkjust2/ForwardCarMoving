@@ -1,2 +1,2 @@
 readme file
-![](Recordings/movie.mov)
+![](Recordings/movie.gif)
